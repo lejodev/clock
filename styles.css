@@ -1,0 +1,96 @@
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    /* overflow: hidden; */
+    position: relative;
+    margin: auto;
+    height: 460px;
+    width: 460px;
+    padding: 30px;
+    border: black solid 10px;
+    border-radius: 50%;
+}
+.pivot {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    content: "";
+    background-color: black;
+    z-index: 33;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    /* transform-origin: 30px 30px; */
+}
+
+.hour {
+    position: absolute;
+    height: 210px;
+    width: 9px;
+    content: "";
+    z-index: 33;
+    background-color: black;
+    top: 0;
+    right: 0;
+    bottom: 32.2%;
+    left: 0;
+    margin: auto;
+    /* transform: rotate(60deg); */
+    transform-origin: 50% 90%;
+}
+
+.minute {
+    position: absolute;
+    height: 270px;
+    width: 9px;
+    content: "";
+    z-index: 33;
+    background-color: black;
+    top: 0;
+    right: 0;
+    bottom: 41%;
+    left: 0;
+    margin: auto;
+    /* transform: rotate(60deg); */
+    transform-origin: 50% 90%;
+}
+
+.second {
+    position: absolute;
+    height: 270px;
+    width: 4.5px;
+    content: "";
+    z-index: 33;
+    background-color: black;
+    top: 0;
+    right: 0;
+    bottom: 41%;
+    left: 0;
+    margin: auto;
+    /* transform: rotate(60deg); */
+    transform-origin: 50% 90%;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.hour {
+    animation: rotate 43200s infinite linear;
+}
+
+.minute {
+    animation: rotate 3600s infinite steps(3600);
+}
+
+.second{
+    animation: rotate 60s infinite steps(60);
+}
